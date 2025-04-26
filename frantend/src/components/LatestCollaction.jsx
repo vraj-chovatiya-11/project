@@ -3,7 +3,6 @@ import { ShopContext } from '../context/ShopContext';
 import Tittle from './Tittle';
 import ProductIteam from './ProductIteam';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import '../styles/latestCollection.css';
 
 const LatestCollection = () => {
   const { products, currancy } = useContext(ShopContext);
@@ -33,52 +32,62 @@ const LatestCollection = () => {
   );
 
   return (
-    <section className="latest-collection">
-      <div className="container">
-        <div className="collection-header">
-          <Tittle text1="LATEST" text2="COLLECTION" />
-          <p className="collection-description">
-            Discover our newest arrivals and trending styles
+    <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="flex justify-center mb-3">
+            <Tittle text1="LATEST" text2="COLLECTION" />
+          </div>
+          <p className="mt-4 max-w-2xl mx-auto text-sm text-gray-500">
+            Discover our newest arrivals and trending styles for this season
           </p>
         </div>
         
-        <div className="collection-showcase">
-          <button 
-            className="nav-button prev-button" 
-            onClick={handlePrevPage}
-            aria-label="Previous page"
-          >
-            <FiChevronLeft />
-          </button>
-          
-          <div className="collection-grid">
-            {displayedProducts.map((item) => (
-              <ProductIteam
-                key={item._id}
-                id={item._id}
-                image={item.image}
-                name={item.name}
-                price={item.price}
-                currancy={currancy}
-              />
-            ))}
+        <div className="relative">
+          <div className="flex items-center justify-center">
+            <button 
+              className="absolute left-0 sm:left-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-md text-gray-700 hover:bg-gray-50 transition-all duration-200 transform hover:-translate-x-1"
+              onClick={handlePrevPage}
+              aria-label="Previous page"
+            >
+              <FiChevronLeft className="w-5 h-5" />
+            </button>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-6xl mx-auto px-10 sm:px-16 md:px-4">
+              {displayedProducts.map((item) => (
+                <div key={item._id} className="transform transition-transform duration-300 hover:-translate-y-2">
+                  <ProductIteam
+                    id={item._id}
+                    image={item.image}
+                    name={item.name}
+                    price={item.price}
+                    currancy={currancy}
+                  />
+                </div>  
+              ))}
+            </div>
+            
+            <button 
+              className="absolute right-0 sm:right-4 z-10 w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-md text-gray-700 hover:bg-gray-50 transition-all duration-200 transform hover:translate-x-1"
+              onClick={handleNextPage}
+              aria-label="Next page"
+            >
+              <FiChevronRight className="w-5 h-5" />
+            </button>
           </div>
-          
-          <button 
-            className="nav-button next-button" 
-            onClick={handleNextPage}
-            aria-label="Next page"
-          >
-            <FiChevronRight />
-          </button>
         </div>
         
-        <div className="pagination-dots">
+        <div className="flex justify-center mt-10">
           {Array.from({ length: pageCount }).map((_, index) => (
-            <span 
-              key={index} 
-              className={`pagination-dot ${currentPage === index ? 'active' : ''}`}
+            <button 
+              key={index}
+              className={`mx-1 transition-all duration-300 focus:outline-none ${
+                currentPage === index 
+                  ? 'w-6 h-2 bg-gray-800 rounded-sm' 
+                  : 'w-2 h-2 bg-gray-300 rounded-full hover:bg-gray-400'
+              }`}
               onClick={() => setCurrentPage(index)}
+              aria-label={`Go to page ${index + 1}`}
             />
           ))}
         </div>
