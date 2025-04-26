@@ -1,0 +1,106 @@
+.add-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .field-label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .image-upload {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .image-thumb {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .image-thumb:hover {
+    transform: scale(1.05);
+  }
+  
+  .form-group {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .input, .textarea, select {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+  }
+  
+  .textarea {
+    min-height: 6rem;
+    resize: vertical;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #6b7280;
+  }
+  
+  @media (min-width: 640px) {
+    .form-row {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  
+    .form-group {
+      flex: 1;
+    }
+  }
+  
+  .size-options {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .size-box {
+    background-color: #e2e8f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .size-box.active {
+    background-color: #fbcfe8;
+  }
+  
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .submit-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 0;
+    width: 7rem;
+    border-radius: 0.375rem;
+    margin-top: 1rem;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1f2937;
+  }
+  

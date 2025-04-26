@@ -1,0 +1,216 @@
+/* Latest Collection Styles */
+.latest-collection {
+  padding: 5rem 0;
+  background-color: #fafafa;
+}
+
+.latest-collection .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header Styles */
+.collection-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.collection-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 1rem;
+  font-weight: 300;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Product Grid */
+.collection-showcase {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Navigation Buttons */
+.nav-button {
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prev-button {
+  margin-right: 1rem;
+}
+
+.next-button {
+  margin-left: 1rem;
+}
+
+/* Pagination Dots */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination-dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #d4d4d4;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-dot.active {
+  background-color: #333;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.pagination-dot:hover {
+  background-color: #999;
+}
+
+/* Product Item Styling (additional enhancements) */
+.product-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-item:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-details {
+  padding: 1.2rem;
+}
+
+.product-name {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.product-price {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+/* Quick actions overlay */
+.quick-actions {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 0;
+  transition: all 0.3s ease;
+}
+
+.product-item:hover .quick-actions {
+  bottom: 0;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.action-button:hover {
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .collection-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .product-image img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .nav-button {
+    height: 36px;
+    width: 36px;
+  }
+  
+  .product-image img {
+    height: 260px;
+  }
+  
+  .collection-header {
+    margin-bottom: 2rem;
+  }
+}

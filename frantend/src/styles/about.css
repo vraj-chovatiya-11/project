@@ -1,0 +1,41 @@
+/* About Page Styles */
+.about-container {
+  position: relative;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+/* Background pattern styling */
+.bg-pattern {
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+
+/* Section styling */
+.about-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card hover effects */
+.about-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Team section styling */
+.team-member {
+  transition: all 0.3s ease;
+}
+
+.team-member:hover .team-member-image {
+  transform: scale(1.05);
+}
+
+.team-member-image {
+  transition: transform 0.3s ease;
+} 

@@ -1,0 +1,80 @@
+/* Contact Page Styles */
+.contact-container {
+  position: relative;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+/* Animation for form fields */
+.contact-container input:focus,
+.contact-container textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.contact-container input,
+.contact-container textarea,
+.contact-container button {
+  transition: all 0.3s ease;
+}
+
+/* Hover effects for contact info cards */
+.contact-container .bg-white {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container .bg-white:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Background pattern for hero section */
+.bg-pattern {
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+
+/* Shadow text effect */
+.shadow-text {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* FAQ section animations */
+.contact-container .max-w-3xl > div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container .max-w-3xl > div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Image hover effect */
+.contact-container .relative > img {
+  transition: transform 0.5s ease;
+}
+
+.contact-container .relative:hover > img {
+  transform: scale(1.02);
+}
+
+/* Form button animation */
+.contact-container form button {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-container form button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transition: width 0.3s ease;
+}
+
+.contact-container form button:hover::after {
+  width: 100%;
+} 
